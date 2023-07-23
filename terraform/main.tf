@@ -115,8 +115,8 @@ resource "aws_ecs_service" "aws-ecs-service" {
   force_new_deployment = true
 
   network_configuration {
-    subnets          = aws_subnet.private.*.id
-    assign_public_ip = false
+    subnets          = aws_subnet.public.*.id
+    assign_public_ip = true
     security_groups = [
       aws_security_group.service_security_group.id,
       aws_security_group.load_balancer_security_group.id
@@ -216,7 +216,7 @@ resource "aws_lb_target_group" "target_group" {
     healthy_threshold   = "3"
     interval            = "300"
     protocol            = "HTTP"
-    matcher             = "304"
+    matcher             = "200"
     timeout             = "3"
     path                = "/"
     unhealthy_threshold = "2"
