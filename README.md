@@ -1,9 +1,9 @@
 # Um app "hello world" nodejs com um cluster de alta disponibilidade e escalabilidade. 
 
-# Utilizando IaC:
-- Terraform
+Utilizando IaC:
+Terraform
 
-# Cloud AWS, foi utilizados os serviços:
+Cloud AWS, foi utilizados os serviços:
 
 S3 - Para armazenar o estado do Terraform;
 Load Balancer - Para balanceamento das requisições;
