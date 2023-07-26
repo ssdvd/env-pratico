@@ -16,8 +16,10 @@ Load Balancer - Para balanceamento das requisições;
 
 ASG - Para escalabilidade;
 
+VPC - selecionando diversas AZ's para disponibilidade;
+
 ECS, EKS, FARGATE - o app;
 
 ECR - Armazenamento de imagem buildada através do docker
 
-CloudWatch - Monitoramento.
+CloudWatch - Monitoramento e HealthCheck.
