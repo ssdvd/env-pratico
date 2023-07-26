@@ -2,7 +2,11 @@
 
 Utilizando IaC:
 
-Terraform
+Terraform.
+
+Build de imagem:
+
+Docker.
 
 Cloud AWS, foi utilizados os serviços:
 
@@ -13,5 +17,7 @@ Load Balancer - Para balanceamento das requisições;
 ASG - Para escalabilidade;
 
 ECS, EKS, FARGATE - o app;
+
+ECR - Armazenamento de imagem buildada através do docker
 
 CloudWatch - Monitoramento.
