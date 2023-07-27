@@ -42,17 +42,10 @@ resource "aws_cloudwatch_log_group" "log-group" {
     Environment = var.app_environment
   }
 }
-/* 
-##################################################################
-# DEFINICAO DA TASK JUNTO AO AWS FARGATE
-##################################################################
-data "template_file" "env_vars" {
-  template = file("env_vars.json")
-}
-*/
-#       "environment": ${data.template_file.env_vars.rendered},
-# PERGUNTAR SOBRE ESSAS VARIAVEIS DE AMBIENTE 
 
+##################################################################
+# TASK ECS
+##################################################################
 resource "aws_ecs_task_definition" "aws-ecs-task" {
   family = "${var.app_name}-task"
 
