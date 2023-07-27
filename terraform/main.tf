@@ -137,7 +137,7 @@ resource "aws_security_group" "service_security_group" {
     protocol        = "-1"
     security_groups = [aws_security_group.load_balancer_security_group.id]
   }
-
+/* #CASO LIBERAR SAIDA
   egress {
     from_port        = 0
     to_port          = 0
@@ -145,7 +145,7 @@ resource "aws_security_group" "service_security_group" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
+*/
   tags = {
     Name        = "${var.app_name}-service-sg"
     Environment = var.app_environment
@@ -182,7 +182,8 @@ resource "aws_security_group" "load_balancer_security_group" {
     ipv6_cidr_blocks = ["::/0"]
   }
 
-  egress {
+/*  #CASO LIBERAR SAIDA
+    egress {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
@@ -193,10 +194,12 @@ resource "aws_security_group" "load_balancer_security_group" {
     Name        = "${var.app_name}-sg"
     Environment = var.app_environment
   }
+*/
+
 }
 
 ##################################################################
-#LOAD BALANCER TARGET GROUP
+#LOAD BALANCER TARGET GROUP E HEALTH CHEKC
 ##################################################################
 resource "aws_lb_target_group" "target_group" {
   name        = "${var.app_name}-${var.app_environment}-tg"
