@@ -190,12 +190,11 @@ resource "aws_security_group" "load_balancer_security_group" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
+*/
   tags = {
     Name        = "${var.app_name}-sg"
     Environment = var.app_environment
   }
-*/
-
 }
 
 ##################################################################
