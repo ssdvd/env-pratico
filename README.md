@@ -33,12 +33,11 @@ cd terraform-cluster-docker-nodejs
 
 cp terraform.tfvars.example terraform.tfvars
 
-**Edite o arquivo terraform.tfvars e insira suas configurações**
-**Inicialize e aplique o Terraform:**
+**Inicialize o Terraform:**
 
 terraform init
 
-terraform apply
+**Edite o arquivo terraform.tfvars e insira suas configurações**
 
 **Construa a imagem Docker do aplicativo:**
 
@@ -51,6 +50,11 @@ docker run -p 8080:8080 hello-world-app
 Acesse o aplicativo no seu navegador em http://localhost:8080.
 
 Em seguida suba a imagem para o repositório EKS na AWS.
+
+**Aplique o Terraform:**
+
+terraform apply
+
 
 ## Notas
 Este é um projeto de exemplo e não é adequado para ambientes de produção sem ajustes adicionais.
