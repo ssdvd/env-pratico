@@ -42,13 +42,15 @@ terraform apply
 
 Construa a imagem Docker do aplicativo:
 
-docker build -t hello-world-app.
+docker build -t hello-world-app ./docker-node
 
-Execute o aplicativo em um ambiente de contêiner:
+Execute o aplicativo em um ambiente de contêiner para validar:
 
-docker run -p 80:80 hello-world-app
+docker run -p 8080:8080 hello-world-app
 
-Acesse o aplicativo no seu navegador em http://localhost:80.
+Acesse o aplicativo no seu navegador em http://localhost:8080.
+
+Em seguida suba a imagem para o repositório EKS na AWS.
 
 ## Notas
 Este é um projeto de exemplo e não é adequado para ambientes de produção sem ajustes adicionais.
