@@ -25,8 +25,8 @@ Este projeto é um exemplo de um aplicativo "Hello World" Node.js que demonstra 
 
 1. Clone este repositório:
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/ssdvd/terraform-cluster-docker-nodejs
+cd terraform-cluster-docker-nodejs
 
 Crie uma instância do terraform.tfvars e defina suas variáveis de ambiente:
 cp terraform.tfvars.example terraform.tfvars
@@ -41,9 +41,9 @@ Construa a imagem Docker do aplicativo:
 docker build -t hello-world-app.
 
 Execute o aplicativo em um ambiente de contêiner:
-docker run -p 3000:3000 hello-world-app
+docker run -p 80:80 hello-world-app
 
-Acesse o aplicativo no seu navegador em http://localhost:3000.
+Acesse o aplicativo no seu navegador em http://localhost:80.
 
 ## Notas
 Este é um projeto de exemplo e não é adequado para ambientes de produção sem ajustes adicionais.
