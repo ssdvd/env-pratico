@@ -23,7 +23,7 @@ Este projeto é um exemplo de um aplicativo "Hello World" Node.js que demonstra 
 
 ## Como Usar
 
-1. Clone este repositório:
+**Clone este repositório:**
 
 git clone https://github.com/ssdvd/terraform-cluster-docker-nodejs
 
