@@ -25,27 +25,22 @@ Este projeto é um exemplo de um aplicativo "Hello World" Node.js que demonstra 
 
 1. Clone este repositório:
 
-bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
 
 Crie uma instância do terraform.tfvars e defina suas variáveis de ambiente:
-bash
 cp terraform.tfvars.example terraform.tfvars
 
 # Edite o arquivo terraform.tfvars e insira suas configurações
 Inicialize e aplique o Terraform:
-bash
 
 terraform init
 terraform apply
 
 Construa a imagem Docker do aplicativo:
-bash
 docker build -t hello-world-app.
 
 Execute o aplicativo em um ambiente de contêiner:
-bash
 docker run -p 3000:3000 hello-world-app
 
 Acesse o aplicativo no seu navegador em http://localhost:3000.
