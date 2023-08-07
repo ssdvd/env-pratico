@@ -29,22 +29,22 @@ git clone https://github.com/ssdvd/terraform-cluster-docker-nodejs
 
 cd terraform-cluster-docker-nodejs
 
-Crie uma instância do terraform.tfvars e defina suas variáveis de ambiente:
+**Crie uma instância do terraform.tfvars e defina suas variáveis de ambiente:**
 
 cp terraform.tfvars.example terraform.tfvars
 
-# Edite o arquivo terraform.tfvars e insira suas configurações
-Inicialize e aplique o Terraform:
+**Edite o arquivo terraform.tfvars e insira suas configurações**
+**Inicialize e aplique o Terraform:**
 
 terraform init
 
 terraform apply
 
-Construa a imagem Docker do aplicativo:
+**Construa a imagem Docker do aplicativo:**
 
 docker build -t hello-world-app ./docker-node
 
-Execute o aplicativo em um ambiente de contêiner para validar:
+**Execute o aplicativo em um ambiente de contêiner para validar:**
 
 docker run -p 8080:8080 hello-world-app
 
